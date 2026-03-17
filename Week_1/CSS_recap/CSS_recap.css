@@ -1,0 +1,102 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+* {
+   font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Playfair Display', serif;
+}
+
+/* overall style */
+body {
+   background-color: #f0f0f0;
+}
+
+div {
+   background-color: white;
+   padding: 20px;
+   margin: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* heading_div */
+#heading_div {
+   text-align: center;
+}
+
+/* link_div */
+#link_div a {
+   color: #ff8520;
+   text-decoration: none;
+   font-size: 18px;
+   display: block;
+   margin: 10px 0;
+   transition: letter-spacing 0.4s ease, color 0.4s ease;
+   letter-spacing: normal;
+}
+
+#link_div a:hover {
+   letter-spacing: 4px;
+   color: #007bff;
+   font-weight: bold;
+}
+
+/* image_div */
+#image_div {
+   perspective: 1000px;
+}
+#image_div img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+   will-change: transform;
+}
+#image_div img:hover {
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* table_div */
+#table_div table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+}
+#table_div th, #table_div td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: left;
+}
+#table_div th {
+   background-color: #b6b6b6;
+   font-weight: bold;
+}
+#table_div tr:nth-child(odd) {
+   background-color: #ebebeb;
+}
+
+#table_div tr:hover {
+   background-color: #ecfbfe;
+}
+#table_div td:hover {
+    background-color: #cce5ff;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* list_div */
+#list_div ul {
+   padding-left: 20px;
+}
+#list_div li {
+   margin: 10px 0;
+   font-size: 18px;
+}
+
+#no_point_list{
+   list-style: none;
+}
