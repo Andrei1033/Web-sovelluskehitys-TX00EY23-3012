@@ -771,3 +771,20 @@ const restaurants = [
 ];
 
 // your code here
+
+restaurants.sort((a, b) => a.name.localeCompare(b.name));
+
+console.log(restaurants);
+
+// show data in html page
+for (let restourant of restaurants) {
+   const row = document.createElement('tr');
+   const name = document.createElement('td');
+   const adress = document.createElement('td');
+
+   name.innerText = restourant.name;
+   adress.innerText = restourant.address;
+
+   row.append(name, adress);
+   document.querySelector("table").appendChild(row);
+}
