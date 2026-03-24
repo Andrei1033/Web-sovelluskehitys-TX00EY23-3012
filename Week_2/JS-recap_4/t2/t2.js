@@ -773,18 +773,46 @@ const restaurants = [
 // your code here
 
 restaurants.sort((a, b) => a.name.localeCompare(b.name));
-
 console.log(restaurants);
 
+const table = document.querySelector('table');
+const dialog = document.querySelector('dialog');
+
 // show data in html page
-for (let restourant of restaurants) {
+for (let restaurant of restaurants) {
    const row = document.createElement('tr');
    const name = document.createElement('td');
    const adress = document.createElement('td');
 
-   name.innerText = restourant.name;
-   adress.innerText = restourant.address;
+   name.innerText = restaurant.name;
+   adress.innerText = restaurant.address;
 
    row.append(name, adress);
-   document.querySelector("table").appendChild(row);
+
+   row.addEventListener('click', () => {
+      document.querySelectorAll("tr").forEach((tr) => {
+         tr.classList.remove("highlight");
+      });
+      row.classList.add("highlight");
+
+      dialog.innerHTML = `
+         <h2>${restaurant.name}</h2>
+         <p><strong>Address:</strong> ${restaurant.address}</p>
+         <p><strong>Postal Code:</strong> ${restaurant.postalCode}</p>
+         <p><strong>City:</strong> ${restaurant.city}</p>
+         <p><strong>Phone:</strong> ${restaurant.phone}</p>
+         <p><strong>Company:</strong> ${restaurant.company}</p>
+         <button id="close-btn">Close</button>
+      `;
+
+      // open modal
+      dialog.showModal();
+
+      // close modal
+      dialog.querySelector("#close-btn").addEventListener("click", () => {
+         dialog.close();
+      });
+   });
+
+   table.appendChild(row);
 }

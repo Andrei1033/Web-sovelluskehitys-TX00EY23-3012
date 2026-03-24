@@ -28,3 +28,15 @@ td {
 table tr:hover {
   background-color: #e0e0e0;
 }
+
+
+.highlight {
+  background-color: lightyellow;
+  font-weight: bold;
+}
+
+dialog {
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+}
