@@ -1,0 +1,105 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+}
+
+li {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  min-height: 3rem;
+}
+
+/* Task text styling */
+li span {
+  flex: 1;
+  margin-right: 1rem;
+  word-break: break-word;
+}
+
+li button {
+  width: 4rem;
+  height: 2rem;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+li button:hover {
+  background-color: rgb(200, 0, 0);
+}
+
+li input {
+  margin: 0;
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Completed task styling - using class for better control */
+li.completed span {
+  background-color: rgb(146, 208, 136);
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.add-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(80, 80, 168);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: rgb(60, 60, 128);
+}
+
+/* Dialog styling */
+dialog {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+dialog form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+dialog input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+dialog button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(80, 80, 168);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
