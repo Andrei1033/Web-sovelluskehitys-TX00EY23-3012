@@ -1,0 +1,117 @@
+/* === PERUS === */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 2rem;
+  color: #222;
+}
+
+/* === TAULUKKO === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+thead {
+  background: #2c3e50;
+  color: white;
+}
+
+td, th {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+tr {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* hover efekti */
+tr:hover {
+  background: #f1f7ff;
+  transform: scale(1.01);
+}
+
+/* valittu rivi */
+.highlight {
+  background: #d6eaff !important;
+  border-left: 5px solid #3498db;
+}
+
+/* === MODAL === */
+dialog#modal {
+  border: none;
+  border-radius: 16px;
+  padding: 2rem;
+  width: min(600px, 90%);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  animation: fadeIn 0.2s ease;
+}
+
+/* taustan blur */
+dialog::backdrop {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* otsikko */
+dialog h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* ruokalista */
+.course {
+  background: #f9fafc;
+  border: 1px solid #eaecef;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.course:hover {
+  background: #eef6ff;
+  transform: translateX(5px);
+}
+
+/* hinta & allergeenit */
+.course p {
+  margin: 4px 0;
+}
+
+/* close button */
+#closeBtn {
+  margin-top: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#closeBtn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* modal animaatio */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
